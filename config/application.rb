@@ -36,6 +36,7 @@ module Facturas
     bower_dir = Rails.root.join('vendor', 'assets', 'bower_components').to_s
     config.assets.paths << bower_dir
     config.sass.load_paths << bower_dir
+    config.autoload_paths += %W(#{config.root}/lib)
 
     config.to_prepare do
       DeviseController.respond_to :html, :json
