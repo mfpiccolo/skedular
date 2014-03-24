@@ -6,6 +6,9 @@ Router.map(function() {
   this.route('signUp', {path: '/sign-up'});
   this.route('dashboard');
   this.route('navbar');
+  this.resource('contacts', function() {
+    this.route('show', {path: ':contact_id'});
+  });
   this.resource('clients', function() {
     this.route('new');
     this.route('edit', {path: ':client_id/edit'});

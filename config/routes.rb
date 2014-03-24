@@ -14,6 +14,7 @@ Rails.application.routes.draw do
       resources :clients
       resources :invoice_items
       resources :dashboard
+      resources :contacts, only: [:index, :show]
     end
   end
 
