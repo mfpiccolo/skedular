@@ -6,6 +6,7 @@ Router.map(function() {
   this.route('signUp', {path: '/sign-up'});
   this.route('dashboard');
   this.route('navbar');
+  this.route('calendar');
   this.resource('contacts', function() {
     this.route('show', {path: ':contact_id'});
   });
