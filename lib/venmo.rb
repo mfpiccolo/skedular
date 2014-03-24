@@ -19,7 +19,7 @@ class Venmo
     @contacts = Hashie::Mash.new(JSON.parse response.body).data
   end
 
-  def get_me
+  def get_info
     response = conn.get base_url + "me" do |request|
       request.params['access_token'] = token
     end

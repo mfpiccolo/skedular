@@ -4,7 +4,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     auth = request.env["omniauth.auth"]
 
     venmo = Venmo.new(auth.credentials.token)
-    venmo_user = venmo.get_me
+    venmo_user = venmo.get_info
 
     # Update user and sign
     current_user.update_attributes(
