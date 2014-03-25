@@ -13,6 +13,7 @@
  *= require font-awesome
  *= require sb-admin
  *= require foundation
+ *= require fullcalendar
  *= require ../../../vendor/assets/bower_components/chocolatechip-ui/src/chui/min/chui.ios-3.0.4.min
  *= require all
  */
