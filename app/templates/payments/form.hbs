@@ -1,0 +1,23 @@
+<div class="form-group has-success">
+  <label class="control-label">Email
+    {{input value=payer_email class="payment-payer_email form-control"}}
+  </label>
+</div>
+<div class="form-group has-warning">
+  <label class="control-label">Amount
+    {{input value=amount_cents class="payment-amount_cents form-control"}}
+  </label>
+</div>
+<div class="form-group has-error">
+  <label class="control-label">Description
+    {{input value=description class="payment-description form-control"}}
+  </label>
+</div>
+<div class="form-group has-error">
+  <label class="control-label">Collector_id
+    {{input value=collector_id class="payment-collector_id form-control"}}
+  </label>
+</div>
+
+<button type="submit" {{action save}} class="create btn btn-default">Submit</button>
+<button type="submit" {{action cancel}} class="cancel btn btn-default">Cancel</button>
