@@ -1,4 +1,4 @@
-class Facturas::RegistrationsController < Devise::RegistrationsController
+class Skedular::RegistrationsController < Devise::RegistrationsController
   after_action :set_csrf_headers, only: [:create, :destroy]
 
   protected

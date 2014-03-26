@@ -8,10 +8,10 @@ class Api::V1::ContactsController < Api::V1::ApplicationController
     respond_with fixture_contacts
   end
 
-  # GET /clients/1
+  # GET /contactss/1
   def show
-    @client = JSON.parse(fixture_contacts).detect {|c| c["id"] == params[:id] }
-    respond_with @client
+    @contacts = JSON.parse(fixture_contacts).detect {|c| c["id"] == params[:id] }
+    respond_with @contacts
   end
 
   # TODO Remove. Just for testing and dev to not slam the venmo api.  Remove this at some point

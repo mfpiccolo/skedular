@@ -1,5 +1,5 @@
 export default DS.Model.extend({
-  payment_at: DS.attr('number'),
+  payment_at: DS.attr('string'),
   payer_email: DS.attr('string'),
   collector_id: DS.attr('number'),
   payer_id: DS.attr('number'),
