@@ -32,6 +32,13 @@ export default Ember.Route.extend({
     },
     cancel: function() {
       this.transitionTo('payments.index');
+    },
+    goTo: function(route, payable) {
+      if (typeof payable !== 'undefined') {
+        this.transitionTo(route, payable);
+      } else {
+        this.transitionTo(route);
+      }
     }
   }
 });

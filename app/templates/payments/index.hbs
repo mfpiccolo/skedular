@@ -1,4 +1,23 @@
-<div class="row">
+<article id="unapproved-payables">
+  <section>
+    <h2>Unnaproved Payables</h2>
+    <ul class='list' role='list'>
+      {{#each controller}}
+        <li class='comp' {{action 'goTo' 'payments.show' this}} data-goto="">
+          <aside><a class="button action">Approve All</a></aside>
+          <div>
+            <h3>Joe</h3>
+          </div>
+          <aside>
+            <h4>{{amount_cents}}</h4>
+            <span class='nav'></span>
+          </aside>
+        </li>
+      {{/each}}
+    </ul>
+  </section>
+</article>
+{{!-- <div class="row">
   <div class="col-lg-12">
     <h1 class="page-header">Clientes</h1>
   </div>
@@ -22,7 +41,7 @@
           </tr>
           {{#each filteredClients}}
           <tr class="client-row">
-            <td>{{#link-to 'clients.show' this}}{{firstName}}{{/link-to}}</td>
+            <td>{{#link-to 'payments.show' this}}{{firstName}}{{/link-to}}</td>
             <td>{{lastName}}</td>
             <td>{{phone}}</td>
             <td>{{format-money balance}}</td>
@@ -34,4 +53,4 @@
     </div>
     <!-- /.panel-body -->
   </div>
-</div>
+</div> --}}

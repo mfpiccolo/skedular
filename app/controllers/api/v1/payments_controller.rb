@@ -5,9 +5,12 @@ class Api::V1::PaymentsController < Api::V1::ApplicationController
 
   # GET /payments
   def index
-    @payments = Payment.all
-    render json: @payments.to_json
+    # @payments = Payment.all
+    # render json: @payments.to_json
     # respond_with @payments
+    @payments = Payment.all
+
+    respond_with @payments
   end
 
   # GET /payments/1

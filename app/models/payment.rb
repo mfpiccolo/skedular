@@ -19,11 +19,11 @@ class Payment < ActiveRecord::Base
     payment_at.to_date
   end
 
-  def as_json options=nil
-    options ||= {}
-    options[:methods] = ((options[:methods] || []) + [:title, :start])
-    super options
-  end
+  # def as_json options=nil
+  #   options ||= {}
+  #   options[:methods] = ((options[:methods] || []) + [:title, :start])
+  #   super options
+  # end
 
   # TODO add validation to have either user id or email
 end
