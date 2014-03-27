@@ -3,6 +3,12 @@ export default Ember.Route.extend({
     return this.store.createRecord('payment');
   },
   actions: {
+    validSignIn: function() {
+      this.transitionTo("dashboard");
+    },
+    didSignOut: function() {
+      this.transitionTo("index");
+    },
     open: function() {
       return this.render('modal', {
         into: 'application',

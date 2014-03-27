@@ -9,10 +9,18 @@
   opacity: 0.4;
 }
 
-#signup {
+.popup {
 
-   width: 300px;
-   padding-bottom: 2px;
+  display: block;
+  position: fixed;
+  opacity: 1;
+  z-index: auto;
+  left: 50%;
+  margin-left: -202px;
+  top: 100px;
+
+  width: 300px;
+  padding-bottom: 2px;
 
   display:none;
 
@@ -23,7 +31,7 @@
 
 }
 
-        #test {
+/*#test {
      width: 600px;
 padding: 30px;
     display:none;
@@ -54,9 +62,9 @@ padding: 30px;
 
 p.error { position: absolute; bottom: 48px; right: 20px; width: 262px; color: #FFF; font-size: 1.1em; padding-bottom: 5px; background: url(../img/error-arw.png) 20px bottom no-repeat; text-align: left; margin: 0; text-shadow: none; }
 p.error span { display: inline-block; background: #D43636; padding: 6px; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;  }
-.txt-fld input:focus, .txt-fld textarea:focus { background-color: #FAF9DC; }
+.txt-fld input:focus, .txt-fld textarea:focus { background-color: #FAF9DC; }*/
 
-button {
+/*button {
   float: right;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   background: #3F9D4A;
@@ -66,5 +74,15 @@ button {
   font-size: 1.4em;
   color: #FFF;
  padding: 7px 10px;  border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; font-weight: bold; text-shadow: 0 1px 0 rgba(0,0,0,0.4);}
+*/
+/*.popup {
+  display: block;
+  position: fixed;
+  opacity: 1;
+  z-index: auto;
+  left: 50%;
+  margin-left: -202px;
+  top: 100px;
+}*/
 
 .modal_close { position: absolute; top: 12px; right: 12px; display: block; width: 14px; height: 14px; background: url(../img/modal_close.png); z-index: 2; }

@@ -7,6 +7,13 @@ var CalendarView = Ember.View.extend({
         dayClick: function(date, allDay, jsEvent, view) {
           // transition to schedule payment page
           self.get("controller").send("open")
+          Ember.run.debounce(this, function() {
+            console.log(moment(date).format("YYYY-MM-DD hh:mm:ss"));
+            $(".payment-payment_at").attr('value', (moment(date).format("YYYY-MM-DD hh:mm:ss") + " -0700"));
+            $(".payment-payment_at").focus();
+            $(".payment-payment_at").blur();
+            $(".payment-payment_at").attr("readonly","readonly");
+          }, 0);
         },
         header: {
             left: 'prev,today,next',

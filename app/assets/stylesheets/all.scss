@@ -75,8 +75,10 @@ h3 {
 
 article {
   a.dwolla-button {
-    color: white !important;
-    border: solid 1px white !important;
+    &:hover {
+      color: white !important;
+      border: solid 1px white !important;
+    }
   }
 }
 

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: {
     sessions: 'ember_devise_simple_auth/sessions',
-    registrations: "facturas/registrations",
+    registrations: "skedular/registrations",
     :omniauth_callbacks => "users/omniauth_callbacks"
   }
 

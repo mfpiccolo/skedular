@@ -9,7 +9,7 @@ class AddVenmoToUsers < ActiveRecord::Migration
     add_column :users, :venmo_last_name,           :string
     add_column :users, :venmo_profile_picture_url, :string
     add_column :users, :venmo_username,            :string
-    add_column :users, :venmo_balance_cents,       :integer
+    add_column :users, :venmo_balance_cents,       :integer, defalut: 0
     add_column :users, :venmo_token,    :string
   end
 end

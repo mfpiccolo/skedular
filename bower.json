@@ -1,5 +1,5 @@
 {
-  "name": "facturas",
+  "name": "skedular",
   "dependencies": {
     "ember-devise-simple-auth": "0.5.0",
     "ic-ajax": "~1.0.0",

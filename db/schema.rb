@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140325025116) do
+ActiveRecord::Schema.define(version: 20140327073453) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,13 +48,6 @@ ActiveRecord::Schema.define(version: 20140325025116) do
     t.boolean  "approved",     default: false
     t.datetime "payment_at"
   end
-
-  create_table "reports", force: true do |t|
-    t.integer "balance", default: 0
-    t.date    "date",                null: false
-  end
-
-  add_index "reports", ["date"], name: "index_reports_on_date", unique: true, using: :btree
 
   create_table "users", force: true do |t|
     t.string   "first_name"
