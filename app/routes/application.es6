@@ -24,9 +24,12 @@ export default Ember.Route.extend({
     },
     save: function() {
       var model = this.get('controller.model');
+      var cents = (model.get("amount_cents")*100);
+      model.set("amount_cents", cents)
       var _this = this;
       model.save().then(function(model) {
-        _this.transitionTo('payments.show', model);
+      $('#calendar').fullCalendar('refetchEvents');
+      $("input .payment").val("");
       }, function(){alert('reject');});
       this.send('close')
     },
@@ -39,6 +42,6 @@ export default Ember.Route.extend({
       } else {
         this.transitionTo(route);
       }
-    }
+    },
   }
 });

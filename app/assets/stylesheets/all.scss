@@ -2,6 +2,10 @@
   padding: 0;
 }
 
+.tabbar {
+  z-index: 9;
+}
+
 .tab-bar-section, .right-small, .left-small, .top-bar {
   background-color: #27AE60;
 }
