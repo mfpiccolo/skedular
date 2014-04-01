@@ -36,11 +36,11 @@ export default Ember.Route.extend({
     cancel: function() {
       this.transitionTo('payments.index');
     },
-    goTo: function(route, payable) {
-      if (typeof payable !== 'undefined') {
-        this.transitionTo(route, payable);
+    goTo: function(route, object, state) {
+      if (typeof object !== 'undefined') {
+        this.transitionTo(route, object, {queryParams: {sortBy: state}});
       } else {
-        this.transitionTo(route);
+        this.transitionTo(route, {queryParams: {sortBy: state}});
       }
     },
   }

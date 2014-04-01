@@ -1,6 +1,5 @@
 export default Ember.Route.extend({
-  model: function() {
-    console.log(this.store.find('payment'))
-    return this.store.find('payment');
+  model: function(params) {
+    return this.store.find('payment', params);
   }
 });

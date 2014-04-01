@@ -1,6 +1,6 @@
 var PaymentsIndex = Ember.ArrayController.extend({
   queryParams: ['sortBy'],
-  sortBy: 'lastName',
+  sortBy: 'Something',
   sortProperties: function() {
     return [this.get('sortBy')];
   }.property('sortBy'),

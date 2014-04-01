@@ -7,13 +7,13 @@
         <div class="small-6 columns home-square">
           <li data-goto="approved-receivables">
             <h4>Approved</h4>
-            <div class="money credit" {{action "goTo" "payments"}}>{{approved_receivables}}</div>
+            <div class="money credit" {{action "goTo" "payments" nil "approved_receivables"}}>{{approved_receivables}}</div>
           </li>
         </div>
         <div class="small-6 columns home-square">
           <li data-goto="unapproved-receivables">
             <h4>Unapproved</h4>
-            <div class="money credit" {{action "goTo" "payments"}}>{{unapproved_receivables}}</div>
+            <div class="money credit" {{action "goTo" "payments" nil "unapproved_receivables"}}>{{unapproved_receivables}}</div>
           </li>
         </div>
       </div>
@@ -22,13 +22,13 @@
         <div class="small-6 columns home-square">
           <li data-goto="approved-payables">
             <h4>Approved</h4>
-            <div class="money debt" {{action "goTo" "payments"}}>{{approved_payables}}</div>
+            <div class="money debt" {{action "goTo" "payments" nil "approved_payables"}}>{{approved_payables}}</div>
           </li>
         </div>
         <div class="small-6 columns home-square">
           <li data-goto="unapproved-payables">
             <h4>Unapproved</h4>
-            <div class="money debt" {{action "goTo" "payments"}}>{{upapproved_payables}}</div>
+            <div class="money debt" {{action "goTo" "payments" nil "upapproved_payables"}}>{{upapproved_payables}}</div>
           </li>
         </div>
       </div>

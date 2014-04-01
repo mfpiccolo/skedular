@@ -14,7 +14,7 @@ class Payment < ActiveRecord::Base
   end
 
   def title
-    description
+    payer_email || payer_id
   end
 
   def start
