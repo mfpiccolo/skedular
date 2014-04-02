@@ -35,6 +35,16 @@
           {{input value=payment_at class="payment payment-payment_at form-control"}}
         </aside>
       </li>
+      <li class='comp'>
+        <div>
+          <label for='password'>Contact:</label>
+        </div>
+          {{view Ember.Select
+            content=controller.contacts
+            optionValuePath="content.id"
+            optionLabelPath="content.display_name"
+          }}
+      </li>
     </ul>
     <div>
       <br><br>
@@ -43,6 +53,8 @@
     </div>
   </div>
 </div>
+
+{{log controller.contacts}}
 
 {{!-- <div id="signup" style="display: block; position: fixed; opacity: 1; z-index: 11000; left: 50%; margin-left: -202px; top: 100px;">
   <a class="modal_close" {{action 'close'}}>x</a>

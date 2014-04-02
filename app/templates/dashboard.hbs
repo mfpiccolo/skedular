@@ -28,21 +28,21 @@
         <div class="small-6 columns home-square">
           <li data-goto="unapproved-payables">
             <h4>Unapproved</h4>
-            <div class="money debt" {{action "goTo" "payments" nil "upapproved_payables"}}>{{upapproved_payables}}</div>
+            <div class="money debt" {{action "goTo" "payments" nil "unapproved_payables"}}>{{unapproved_payables}}</div>
           </li>
         </div>
       </div>
       <h3>Totals</h3>
       <div class="row">
         <div class="small-6 columns home-square">
+          <h4>Net Snapshot</h4>
+          <div class="money credit">{{net_snapshot}}</div>
+        </div>
+        <div class="small-6 columns home-square">
           <li data-goto="approved">
             <h4>Available</h4>
             <div class="money credit">{{balance}}</div>
           </li>
-        </div>
-        <div class="small-6 columns home-square">
-          <h4>Net Snapshot</h4>
-          <div class="money credit">65.00</div>
         </div>
       </div>
     </div>

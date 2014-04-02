@@ -7,4 +7,5 @@ class PaymentSerializer < ActiveModel::Serializer
       invoice_items: api_v1_invoice_items_path(payment_id: object.id)
     }
   end
+
 end

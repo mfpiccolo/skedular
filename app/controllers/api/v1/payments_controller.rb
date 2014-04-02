@@ -5,9 +5,10 @@ class Api::V1::PaymentsController < Api::V1::ApplicationController
 
   # GET /payments
   def index
+    @payments = params[:sortBy].present? ? current_user.send(params[:sortBy].to_sym) : current_user.payables
     # service object that takes params[:sortBy] and returns the proper payments
 
-    @payments = Payment.all
+    # @payments = Payment.all
     if params[:start]
       render json: @payments.to_json
     else
