@@ -6,6 +6,15 @@ Router.map(function() {
   this.route('signUp', {path: '/sign-up'});
   this.route('dashboard');
   this.route('navbar');
+  this.route('calendar');
+  this.resource('contacts', function() {
+    this.route('show', {path: ':contact_id'});
+  });
+  this.resource('payments', function() {
+    this.route('new');
+    this.route('edit', {path: ':payment_id/edit'});
+    this.resource('payments.show', {path: ':payment_id'});
+  });
   this.resource('clients', function() {
     this.route('new');
     this.route('edit', {path: ':client_id/edit'});

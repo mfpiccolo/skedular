@@ -13,7 +13,7 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module Facturas
+module Skedular
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -36,6 +36,7 @@ module Facturas
     bower_dir = Rails.root.join('vendor', 'assets', 'bower_components').to_s
     config.assets.paths << bower_dir
     config.sass.load_paths << bower_dir
+    config.autoload_paths += %W(#{config.root}/lib)
 
     config.to_prepare do
       DeviseController.respond_to :html, :json

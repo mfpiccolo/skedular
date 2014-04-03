@@ -1,0 +1,57 @@
+<div class="popup" role="alertdialog" id="warning" style="display: block; position: fixed; opacity: 1; z-index: 11000; left: 50%; margin-left: -202px; top: 100px;">
+  <div class="panel">
+    <a class="modal_close" {{action 'close'}}>x</a>
+    <h2>Schedule Payment</h2>
+    <ul ui-implements='form' class='list'>
+      <li class='comp'>
+        <div>
+          <label for='userName'>Email:</label>
+        </div>
+        <aside>
+          {{input value=payer_email class="payment payment-payer_email form-control"}}
+        </aside>
+      </li>
+      <li class='comp'>
+        <div>
+          <label for='password'>Amount:</label>
+        </div>
+        <aside>
+          {{input value=amount_cents class="payment payment-amount_cents form-control"}}
+        </aside>
+      </li>
+      <li class='comp'>
+        <div>
+          <label for='password'>Description:</label>
+        </div>
+        <aside>
+          {{input value=description class="payment payment-description form-control"}}
+        </aside>
+      </li>
+      <li class='comp'>
+        <div>
+          <label for='password'>Date:</label>
+        </div>
+        <aside>
+          {{input value=payment_at class="payment payment-payment_at form-control"}}
+        </aside>
+      </li>
+      <li class='comp'>
+        <div>
+          <label for='password'>Contact:</label>
+        </div>
+          {{view Ember.Select
+            content=controller.contacts
+            value=venmo_id
+            optionValuePath="content.id"
+            optionLabelPath="content.display_name"
+          }}
+      </li>
+    </ul>
+    <div>
+      <br><br>
+      <a type="submit" {{action save}} class="create button">Submit</a>
+      <a class="button" {{action 'close'}}>Cancel</a>
+    </div>
+  </div>
+</div>
+

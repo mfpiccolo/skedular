@@ -1,5 +1,6 @@
 <nav class="current">
   <h1 class="buttonOnRight">Skedular</h1>
+  Logged In As: {{currentUser.email}}
   {{#if isSignedIn}}
     <a class="button" {{action "signOut" on='click'}}>Logout</a>
   {{else}}

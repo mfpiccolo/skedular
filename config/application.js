@@ -1,5 +1,8 @@
 //= require jquery
-//= require moment-with-langs.min
+//= require fullcalendar/fullcalendar.min
+//= require jquery-once/jquery.once.min
+//= require jquery-leanmodal/jquery.leanModal
+//= require moment.min
 //= require environment
 //= require ember-appkit
 //= require_tree ./adapters
