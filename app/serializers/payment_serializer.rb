@@ -1,6 +1,6 @@
 class PaymentSerializer < ActiveModel::Serializer
   attributes :id, :collector_id, :payer_id, :amount_cents, :description,
-    :created_at, :updated_at, :payer_email, :approved, :payment_at
+    :created_at, :updated_at, :payer_email, :approved, :payment_at, :venmo_id
 
   def links
     {

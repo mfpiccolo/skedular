@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140327073453) do
+ActiveRecord::Schema.define(version: 20140403011052) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20140327073453) do
     t.string   "payer_email"
     t.boolean  "approved",     default: false
     t.datetime "payment_at"
+    t.string   "venmo_id"
   end
 
   create_table "users", force: true do |t|

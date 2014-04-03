@@ -23,7 +23,7 @@ class Api::V1::PaymentsController < Api::V1::ApplicationController
 
   # POST /payments
   def create
-    @payment = Payment.new(payment_params)
+    @payment = current_user.payables.create(payment_params)
 
     if @payment.save
       respond_with(@payment, status: :created, location: [:api, :v1, @payment])
@@ -57,6 +57,8 @@ class Api::V1::PaymentsController < Api::V1::ApplicationController
   # Only allow a trusted parameter "white list" through.
   def payment_params
     params.require(:payment).permit(:id, :payent_date, :description, :payment_at,
-     :payer_email, :collector_id, :payer_id, :amount_cents, :created_at, :updated_at, :payer_email, :approved)
+      :payer_email, :collector_id, :payer_id, :amount_cents, :created_at, :updated_at,
+      :payer_email, :approved, :venmo_id
+    )
   end
 end

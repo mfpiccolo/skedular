@@ -14,7 +14,7 @@ class Payment < ActiveRecord::Base
   end
 
   def title
-    payer_email || payer_id
+    payer_email.present? ? payer_email : venmo_id
   end
 
   def start

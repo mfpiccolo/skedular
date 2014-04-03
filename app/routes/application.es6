@@ -35,7 +35,7 @@ export default Ember.Route.extend({
     save: function() {
       var model = this.get('controller.model');
       var cents = (model.get("amount_cents")*100);
-      model.set("amount_cents", cents)
+      model.set("amount_cents", cents);
       var _this = this;
       model.save().then(function(model) {
       $('#calendar').fullCalendar('refetchEvents');
